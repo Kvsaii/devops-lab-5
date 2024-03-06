@@ -13,10 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Change directory
+        run: cd /home/runner/work/devops-lab-5/devopsLab5
+
       - name: Build program
-        run: |
-          cd ${{ github.workspace }}/devopsLab5
-          gcc -o SimpleCProgram.c ~/desktop/year3semester2/devops/devopslab5
+        run: gcc -o SimpleCProgram SimpleCProgram.c
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
