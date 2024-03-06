@@ -16,7 +16,7 @@ jobs:
       - name: Build program
         run: |
           cd ${{ github.workspace }}
-          gcc -o SimpleCProgram.c ./desktop/year3semester2/devops/devopslab5
+          gcc -o SimpleCProgram.c ~/desktop/year3semester2/devops/devopslab5
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
