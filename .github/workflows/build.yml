@@ -10,14 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Build program
-      run: make
+      - name: Build program
+        run: |
+          gcc -o SimpleCProgram SimpleCProgram.c
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: SimpleCProgram
-        path: SimpleCProgram
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: SimpleCProgram
+          path: SimpleCProgram
