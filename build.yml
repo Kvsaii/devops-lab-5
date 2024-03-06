@@ -19,5 +19,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: my_program
-        path: my_program
+        name: SimpleCProgram
+        path: SimpleCProgram
