@@ -15,6 +15,7 @@ jobs:
 
       - name: Build program
         run: |
+          cd ${{ github.workspace }}
           gcc -o SimpleCProgram SimpleCProgram.c
 
       - name: Upload artifact
@@ -22,3 +23,4 @@ jobs:
         with:
           name: SimpleCProgram
           path: SimpleCProgram
+
