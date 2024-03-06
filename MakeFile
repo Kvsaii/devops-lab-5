@@ -1,6 +1,6 @@
 all: SimpleCProgram
 
-SimpleCProgram: SimpleCProgram.c
+SimpleCProgram: SimpleCProgram
 	gcc -o SimpleCProgram SimpleCProgram.c
 
 clean:
