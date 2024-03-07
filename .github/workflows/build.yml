@@ -7,17 +7,18 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Build program
-        run: gcc -o SimpleCProgram "${{ github.workspace }}/.SimpleCProgram.c"
+        run: gcc -o SimpleCProgram.exe "${{ github.workspace }}\SimpleCProgram.c"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: SimpleCProgram
-          path: SimpleCProgram
+          path: SimpleCProgram.exe
+
