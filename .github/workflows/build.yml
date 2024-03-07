@@ -1,24 +1,28 @@
-name: Build
+name: Build SimpleCProgram
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build program
-        run: gcc -o SimpleCProgram.exe "${{ github.workspace }}\SimpleCProgram.c"
+      - name: Build SimpleCProgram
+        run: make SimpleCProgram 
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: SimpleCProgram
-          path: SimpleCProgram.exe
+          path: SimpleCProgram.c
+
 
