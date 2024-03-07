@@ -1,7 +1,7 @@
 all: SimpleCProgram
 
 SimpleCProgram: SimpleCProgram.c
-	gcc -o SimpleCProgram ./SimpleCProgram.c
+	gcc -o SimpleCProgram SimpleCProgram.c
 
 clean:
 	rm -f SimpleCProgram
